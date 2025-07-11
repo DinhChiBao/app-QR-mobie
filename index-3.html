@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>App Quét Mã QR</title>
+  <link rel="stylesheet" href="style-3.css">
+</head>
+<body>
+  <h1>📷 Quét & Quản lý Mã QR</h1>
+
+  <div class="controls">
+    <textarea id="qrInput" placeholder="Nhập hoặc dán nhiều mã QR..." rows="3"></textarea>
+    <button onclick="startScan()">📷 Quét Camera</button>
+    <button onclick="clearAll()">🗑️ Xóa tất cả</button>
+    <button onclick="exportToExcel()">⬇️ Xuất Excel</button>
+  </div>
+
+  <p id="message" class="message"></p>
+  <input type="text" id="searchInput" placeholder="🔍 Tìm mã...">
+
+  <table id="qrTable">
+    <thead>
+      <tr>
+        <th>STT</th>
+        <th>Mã QR</th>
+        <th>Xóa</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <div id="camera-container">
+    <video id="video" autoplay playsinline></video>
+  </div>
+
+  <footer>
+    <p>© 2025 Bản quyền thuộc Đinh Bảo | dinhbao122002@gmail.com</p>
+  </footer>
+
+  <!-- Thư viện -->
+  <script src="https://unpkg.com/html5-qrcode@2.3.8/minified/html5-qrcode.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
